@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     "jest/globals": true,
   },
-  extends: ["airbnb-base", "prettier"],
+  extends: ["airbnb-base", "plugin:@typescript-eslint/recommended", "prettier"],
   overrides: [
     {
       env: {
@@ -20,7 +20,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ['jest', 'html', ],
+  plugins: ['jest', 'html'],
   rules: {
     "max-len": ["error", { ignoreComments: true }],
     "import/prefer-default-export": "off",

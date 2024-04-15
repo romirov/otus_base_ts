@@ -1,1 +1,2 @@
-console.log("Hello World");
+const anExampleVariable = "Hello World"
+console.log(anExampleVariable)
