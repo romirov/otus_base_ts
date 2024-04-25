@@ -1,6 +1,24 @@
 import { Cell } from "./types/Cell";
 import { removeAllChildNodes } from "./RemoveAllChildNodes";
 
+export const onCellClick = (event: Event) => {
+  let el = event.target.;
+  // eslint-disable-next-line no-new
+  // if(x === 0 && y === 1) {
+  //   document.querySelector(".cell.cell--alive")?.dispatchEvent(
+  //     new Event("click", {
+  //       bubbles: true
+  //     })
+  //   );
+  // } else if(x === 1 && y === 0) {
+  //   document.querySelectorAll(".cell.cell--dead")[1].dispatchEvent(
+  //     new Event("click", {
+  //       bubbles: true
+  //     })
+  //   );
+  // }
+};
+
 export interface IGameView {
   updateGameField(field: Cell[][]): void;
   updateGameState(state: {
@@ -50,8 +68,8 @@ export class GameView implements IGameView{
   }
 
   // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-unused-vars
-  public onCellClick(cb: (x: number, y: number) => void) {
-    throw new Error("Method not implemented.");
+  public onCellClick(cb: (x: number, y: number) => void): void {
+    this.gameField.addEventListener("click" , cb);
   }
 
   // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-unused-vars
