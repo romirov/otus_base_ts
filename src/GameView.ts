@@ -1,23 +1,6 @@
 import { Cell } from "./types/Cell";
 import { removeAllChildNodes } from "./RemoveAllChildNodes";
 
-export const onCellClick = (event: Event) => {
-  let el = event.target.;
-  // eslint-disable-next-line no-new
-  // if(x === 0 && y === 1) {
-  //   document.querySelector(".cell.cell--alive")?.dispatchEvent(
-  //     new Event("click", {
-  //       bubbles: true
-  //     })
-  //   );
-  // } else if(x === 1 && y === 0) {
-  //   document.querySelectorAll(".cell.cell--dead")[1].dispatchEvent(
-  //     new Event("click", {
-  //       bubbles: true
-  //     })
-  //   );
-  // }
-};
 
 export interface IGameView {
   updateGameField(field: Cell[][]): void;
@@ -54,8 +37,6 @@ export class GameView implements IGameView{
 
         if(field[x][y] === 1)
           cell.classList.add("cell--alive");
-        else
-          cell.classList.add("cell--dead");
 
         this.gameField.appendChild(cell);
       }
