@@ -1,24 +1,20 @@
-body {
-  font-family: sans-serif;
+.table {
+  border-collapse: collapse;
 }
 
-table {
-  border-collapse: collapse;
-  margin: 30px;
+.button {
+  margin-bottom: 50px;
 }
 
 .cell {
-  border: 1px solid lightblue;
-  color: lightgray;
-  width: 20px;
-  height: 20px;
-  text-align: center;
+  width: 15px;
+  height: 15px;
 }
 
-.cell--alive {
-  background-color: black;
+.alive {
+  background-color: #4fc720;
 }
 
-.cell--doomed-to-die {
-  background-color: blue;
+.dead {
+  background-color: #fff;
 }

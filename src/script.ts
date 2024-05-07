@@ -1,12 +1,8 @@
-// import { Game } from "./Game";
-// import { GameField } from "./GameField";
-// import { GameView } from "./GameView";
 import "./styles.css";
+import { createGameOfLife } from "./Game";
 
+const gameWrapper: HTMLDivElement = document.createElement("div");
 
-const el = document.getElementById("app") as HTMLElement;
-// document.createElement("form")
+document.body.appendChild(gameWrapper);
 
-// const gameView = new GameView(el);
-// const gameField = new GameField(5, 5);
-// new Game(gameField, gameView, 1000);
+createGameOfLife(10, 10, gameWrapper);
