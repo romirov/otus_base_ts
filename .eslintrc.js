@@ -20,7 +20,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ['jest', 'html'],
+  plugins: ["jest", "html"],
   rules: {
     "max-len": ["error", { ignoreComments: true }],
     "import/prefer-default-export": "off",

@@ -4,7 +4,7 @@ import { getNextState, isAnyoneAlive } from "./GameField";
 export function createGameOfLife(
   sizeX: number,
   sizeY: number,
-  htmlElement: HTMLElement
+  htmlElement: HTMLElement,
 ): void {
   let gameIsRunning = false;
   let timer: NodeJS.Timeout;
@@ -19,7 +19,7 @@ export function createGameOfLife(
   `;
 
   const fieldWrapper = htmlElement.querySelector(
-    ".field-wrapper"
+    ".field-wrapper",
   ) as HTMLElement;
   const button = htmlElement.querySelector("button") as HTMLElement;
   const input = htmlElement.querySelector("input") as HTMLInputElement;

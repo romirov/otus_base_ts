@@ -1,7 +1,7 @@
 export function drawField(
   htmlElement: HTMLElement,
   field: number[][],
-  onCellClick: (x: number, y: number) => void
+  onCellClick: (x: number, y: number) => void,
 ) {
   const rowIterator = (row: number[], rowIndex: number) =>
     `<tr>${row
@@ -41,6 +41,6 @@ export function drawField(
       if (Number(x) >= 0 && Number(y) >= 0) {
         onCellClick(Number(x), Number(y));
       }
-    }
+    },
   );
 }

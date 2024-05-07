@@ -12,7 +12,7 @@ export function getCellState(field: number[][], x: number, y: number): number {
 
 export function getNewCellState(
   currentCellState: number,
-  numOfAliveNeighbours: number
+  numOfAliveNeighbours: number,
 ) {
   if (
     numOfAliveNeighbours === 3 ||
@@ -26,7 +26,7 @@ export function getNewCellState(
 export function getNumOfAliveNeighbours(
   column: number,
   row: number,
-  field: number[][]
+  field: number[][],
 ): number {
   let neighbours = 0;
 
@@ -48,7 +48,7 @@ export function getNextState(field: number[][]): number[][] {
       const currentState = getCellState(field, cellIndex, rowIndex);
       const newState = getNewCellState(currentState, an);
       return newState;
-    })
+    }),
   );
 }
 

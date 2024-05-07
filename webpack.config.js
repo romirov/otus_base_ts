@@ -13,12 +13,12 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
-    extensions: ['.js', '.ts']
+    extensions: [".js", ".ts"],
   },
   devtool: "inline-source-map",
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, "dist"),
     },
     compress: true,
     hot: true,
@@ -47,8 +47,8 @@ module.exports = {
         test: /\.(?:js|mjs|cjs|ts)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-        }
+          loader: "babel-loader",
+        },
       },
     ],
   },
