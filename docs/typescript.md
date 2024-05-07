@@ -42,12 +42,15 @@ npx eslint . --ext .js,.ts
   "import/extensions": ["warn", "never"] // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
 }
 ```
+
 Добавить в .eslintrc.js
+
 ```
 extends: [
     'plugin:@typescript-eslint/recommended',
   ],
 ```
+
 Добавить в корень проекта .eslintignore, в который добавить webpack.config.js
 
 ### Проверка работы с типами
@@ -102,16 +105,21 @@ module.exports = {
 Описывается как в документации webpack так и в документации Typescript
 
 Вариант 2: babel-loader. Упоминается в документации к Typescript и его настройка также описана в документации к webpack (только помните про расширение файла).
+
 ```
 npm install -D babel-loader
 ```
-В webpack.config.js добавляем секцию 
+
+В webpack.config.js добавляем секцию
+
 ```
 resolve: {
     extensions: ['.js', '.ts']
   },
 ```
+
 и добавляем rules
+
 ```
 module: {
     rules: [
@@ -129,7 +137,9 @@ module: {
     ],
   },
 ```
+
 добавляем
+
 ```
 module.exports = {
   devtool: "inline-source-map",
