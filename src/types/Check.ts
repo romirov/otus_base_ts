@@ -1,4 +1,4 @@
-export class Expenditure{
+export class Check{
   date: number = Date.now();
 
   category: string = "";
@@ -9,8 +9,13 @@ export class Expenditure{
   
   amount: number = 0;
 
-  // eslint-disable-next-line max-len
-  constructor(date: string | undefined, category: string | undefined, subcategory: string | undefined, description: string | undefined, amount: string | undefined){
+  constructor(
+    date: string | undefined,
+    category: string | undefined,
+    subcategory: string | undefined,
+    description: string | undefined,
+    amount: string | undefined
+  ) {
     if(date !== undefined)
       this.date = Date.parse(date);
     if(category !== undefined)
